@@ -1,56 +1,50 @@
+<style scoped>
+div {
+  font-family: 'Poetsen One', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
+header {
+  background-color: #758731;
+  color: #727171;
+}
+</style>
+
 <template>
-  <header>
-    <div class="flex">
-      <RouterLink to="/">
-        <h1 class="text-3xl font-bold :hover cursor-pointer">PC BUILDER</h1>
-      </RouterLink>
-      <details class="dropdown ml-10 pt-2">
-        <summary class="m-1 font-bold">Custom Spec</summary>
-        <ul
-          class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52"
-        >
-          <li><RouterLink to="/build">Modified Your PC</RouterLink></li>
-          <li><RouterLink to="/ranking">Top PC Ranking </RouterLink></li>
-        </ul>
-      </details>
-      <details class="dropdown ml-10 pt-2">
-        <summary class="m-1 font-bold">Articles</summary>
-        <ul
-          class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52"
-        >
-          <li><RouterLink to="/news">News</RouterLink></li>
-          <li><RouterLink to="/promotion">Promotion</RouterLink></li>
-          <li><RouterLink to="/howto">How to</RouterLink></li>
-          <li><RouterLink to="/tiptrick">Tips & Tricks</RouterLink></li>
-        </ul>
-      </details>
-      <div class="ml-10 pt-3">
-        <RouterLink to="/contact" class="m-1 font-bold :hover cursor-pointer"
-          >Contacts Us</RouterLink
-        >
-      </div>
-      <!-- <div
-        v-if="userLoggedIn"
-        class="mt-3 ml-auto flex items-center h-5 hover:cursor-pointer"
-        @click="logout"
+  <header class="flex items-center justify-between bg-white py-4 px-6">
+    <div class="flex items-center">
+      <RouterLink to="/" class="text-3xl font-bold hover:cursor-pointer"
+        >Cheap!</RouterLink
       >
-        <img src="../assets/door.png" alt="" class="size-10 mb-2" />
-      </div>
-      <div v-else class="mt-3 ml-auto">
-        <a class="hover:cursor-pointer" to="/login">Login</a>
-      </div> -->
+    </div>
+    <div class="flex items-center">
+      <i class="fa-solid fa-magnifying-glass mr-2"></i>
+      <input
+        type="text"
+        placeholder="Search..."
+        class="px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+      <button
+        class="bg-blue-500 text-white px-4 py-2 rounded-r-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
+        Search
+      </button>
+    </div>
+    <div class="flex items-center space-x-4">
+      <button
+        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
+        <i class="fas fa-shopping-cart"></i>
+      </button>
+      <button
+        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
+        <i class="fas fa-comments"></i>
+      </button>
     </div>
   </header>
 </template>
 
 <script setup></script>
-
-<style scoped>
-/* Header styles */
-header {
-  background-color: #ffff;
-  color: #727171;
-  padding: 10px;
-  text-align: center;
-}
-</style>
